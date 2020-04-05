@@ -17,8 +17,9 @@ object HelloWorld {
 // 伴生类编译后会生成两个字节码文件: HelloWorld.class 和 HelloWorld.class, 其中 HelloWorld.class 中的 main 方法会调用 HelloWorld.class 对象中的方法
 
 // package chapter01
-// import scala.reflect.ScalaSignature
-// public final class
-// ...
 
-//
+// import scala.reflect.ScalaSignature
+
+// public final class
+
+// ...
