@@ -1,5 +1,6 @@
 package chapter01
 
+// 打印字符串
 object StringPrint {
 
   def main(args: Array[String]): Unit = {

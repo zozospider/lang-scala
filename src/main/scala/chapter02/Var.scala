@@ -1,5 +1,6 @@
 package chapter02
 
+// 变量
 object Var {
 
   def main(args: Array[String]): Unit = {

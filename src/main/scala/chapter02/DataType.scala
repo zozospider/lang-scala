@@ -1,5 +1,6 @@
 package chapter02
 
+// 数据类型
 object DataType {
 
   def main(args: Array[String]): Unit = {
