@@ -14,6 +14,22 @@ object DataType {
     val float: Float = 1.0f
     val double: Double = 1.0d
     val boolean: Boolean = true
+    val string: String = "str"
+
+    println(s"byte = $byte")
+    println(s"short = $short")
+    println(s"char = $char")
+    println(s"int = $int")
+    println(s"long = $long")
+    println(s"float = $float")
+    println(s"double = $double")
+    println(s"boolean = $boolean")
+    println(s"string = $string")
+
+    println("------")
+
+    println(s"1.hashCode = ${1.hashCode}")
+    println(s"string.hashcode = ${string.hashCode}")
 
     // Scala 对象分为 AnyVal (值类型) 和 AnyRef (引用类型)
 
