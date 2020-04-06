@@ -33,26 +33,26 @@ object DataType {
 
     // Scala 对象分为 AnyVal (值类型) 和 AnyRef (引用类型)
 
-    // - Any
+    // - Any (所有其他类的超类)
     //   - AnyVal
     //     - StringOps
-    //     - Boolean
-    //     - Double (64 位, 数学计数法表示)
-    //       - Float (32 位, 数学计数法表示)
-    //        - Long (64 位)
-    //          - Int (32 位)
-    //          - Char (32 位, 无负数)
-    //            - Short (16 位)
-    //              - Byte (8 位)
-    //     - Unit
+    //     - Boolean (true / false)
+    //     - Double (64 位, IEEE754 标准的双精度浮点数, 科学计数法表示, -1.7976931348623157E308 ~ 1.7976931348623157E308)
+    //       - Float (32 位, IEEE754 标准的双精度浮点数, 科学计数法表示, -3.4028235E38 ~ 3.4028235E38)
+    //        - Long (64 位有符号补码整数, -9223372036854775808 ~ 9223372036854775807)
+    //          - Int (32 位有符号补码整数, -2147483648 ~ 2147483647)
+    //          - Char (16 位无符号 Unicode 字符, U+0000 ~ U+FFFF)
+    //            - Short (16 位有符号补码整数, -32768 ~ 32767)
+    //              - Byte (8 位有符号补码整数, -128 ~ 127)
+    //     - Unit (表示无值, 只有一个实例值 {})
 
-    //   - AnyRef
+    //   - AnyRef (所有引用类的基类)
     //     - Scala Collections
     //     - Other Scala classes
     //     - all Java classes
     //       - Null
 
-    //   - Nothing
+    //   - Nothing (任何其他类型的子类)
   }
 
 }
