@@ -17,7 +17,7 @@ object Var {
     c1 = 'b'
     b1 = false
 
-    // 使用 val 声明的变量的值是不可以修改的
+    // 使用 val 声明的变量的值是不可以修改的 (对象的引用不可变, 变量引用的对象属性可以变)
     val s2: String = "Amy"
     val i2: Int = 1
     val c2: Char = 'a'
