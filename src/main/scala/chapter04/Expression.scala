@@ -3,41 +3,76 @@ package chapter04
 object Expression {
 
   def main(args: Array[String]): Unit = {
+    exp(true)
+  }
 
-    val int: Int = if (true) {
+  def exp(flag: Boolean): Unit = {
+
+    // 声明变量 value 类型时使用条件分支中多个返回类型的共同最小父类 (参考类型树)
+    // 使用变量时, value.getClass.getName 为满足条件的分支中的返回类型
+
+    println("---Int, Int---")
+    val value1: Int = if (flag) {
       1
     } else {
       2
     }
-    println(int.getClass.getName)
-    println(int)
+    // int
+    println(value1.getClass.getName)
+    println(value1)
 
-    println("------")
+    println("---Unit, Unit---")
+    val value2: Unit = if (flag) {
+    }
+    // void
+    println(value2.getClass.getName)
+    println(value2)
 
-    val float: Float = if (true) {
+    println("---Int, Unit---")
+    val value3: AnyVal = if (flag) {
+      1
+    }
+    // java.lang.Integer
+    println(value3.getClass.getName)
+    println(value3)
+
+    println("---Int, Float---")
+    val value4: AnyVal = if (flag) {
       1
     } else {
       1.0F
     }
-    println(float.getClass.getName)
-    println(float)
+    // java.lang.Integer
+    println(value4.getClass.getName)
+    println(value4)
 
-    println("------")
+    println("---String, String---")
+    val value5: String = if (flag) {
+      "a"
+    } else {
+      "b"
+    }
+    // java.lang.String
+    println(value5.getClass.getName)
+    println(value5)
 
-    // TODO
-    val flag = false
-    val unit = if (flag) {
+    println("---String, Unit---")
+    val value6: Any = if (flag) {
+      "a"
+    }
+    // java.lang.String
+    println(value6.getClass.getName)
+    println(value6)
+
+    println("---String, Int---")
+    val value7: Any = if (flag) {
+      "a"
+    } else {
       1
     }
-    println(unit.getClass.getName)
-
-    println("------")
-
-    // TODO
-    val unit2 = if (false) {
-      "1"
-    }
-    println(unit2.getClass.getName)
+    // java.lang.String
+    println(value7.getClass.getName)
+    println(value7)
   }
 
 }
