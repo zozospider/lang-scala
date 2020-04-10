@@ -1,8 +1,6 @@
-package com.zozospider;
+import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
-
-import org.junit.Test;
 
 /**
  * Unit test for simple App.
