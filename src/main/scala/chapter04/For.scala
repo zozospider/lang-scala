@@ -55,26 +55,36 @@ object For {
 
     println("------")
 
+    for (i <- 0 until 3; j = 10 * i) {
+      print(s"$i $j")
+      if (i != 2) print(" | ")
+    }
+    println()
+
+    for {i <- 0 until 3
+         j = 10 * i} {
+      print(s"$i $j")
+      if (i != 2) print(" | ")
+    }
+    println()
+
+    println("------")
+
     for (i <- 0 until 3) {
       for (j <- 0 until 2) {
         print(s"$i $j")
         if (j != 1) print(", ")
+        else if (i != 2) print(" | ")
       }
-      println()
     }
+    println()
 
-    println("------")
-
-    for (i <- 0 until 3; j = 2 * i) {
-      println(s"$i $j")
+    for (i <- 0 until 3; j <- 0 until 2) {
+      print(s"$i $j")
+      if (j != 1) print(", ")
+      else if (i != 2) print(" | ")
     }
-
-    println("---")
-
-    for {i <- 0 until 3
-         j = 2 * i} {
-      println(s"$i $j")
-    }
+    println()
 
     println("------")
 
@@ -85,10 +95,10 @@ object For {
     *******
      */
     for (i <- 1 to 4) {
-      for (j <- 1 to (4 - i)) {
+      for (_ <- 1 to (4 - i)) {
         print(" ")
       }
-      for (k <- 0 until (2 * i - 1)) {
+      for (_ <- 0 until (2 * i - 1)) {
         print("*")
       }
       println()
