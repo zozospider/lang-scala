@@ -34,6 +34,11 @@ object For {
     }
     println()
 
+    for (i <- 0 until 5 if i < 2 || i > 2) {
+      print(i)
+    }
+    println()
+
     println("------")
 
     for (i <- 0 until(5, 2)) {

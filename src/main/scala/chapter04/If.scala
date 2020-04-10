@@ -1,6 +1,6 @@
 package chapter04
 
-object Expression {
+object If {
 
   def main(args: Array[String]): Unit = {
     exp(true)
