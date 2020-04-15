@@ -73,6 +73,15 @@ object Expression {
     // java.lang.String
     println(value7.getClass.getName)
     println(value7)
+
+    // 你可以组合几个表达式, 并且用 {} 包围起来. 我们称之为代码块 (block). 代码块中最后一个表达式的结果, 也正是整个块的结果
+    println("---Int---")
+    val value8: Int = {
+      val int = 1 + 1
+      int + 1
+    }
+    println(value8.getClass.getName)
+    println(value8)
   }
 
 }
