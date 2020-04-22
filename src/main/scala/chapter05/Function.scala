@@ -26,6 +26,9 @@ object Function {
     def func2b() = 1
     println(func2b())
 
+    def func2c = 1
+    println(func2c)
+
     println("------")
 
     // 有参数, 无返回值
