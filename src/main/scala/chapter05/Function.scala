@@ -57,6 +57,10 @@ object Function {
     () -> {
       println("xxx")
     }
+
+    () => {
+      println("yyy")
+    }
   }
 
 }
