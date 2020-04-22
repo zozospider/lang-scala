@@ -50,6 +50,13 @@ object Function {
 
     def test4b(arg1: Int, arg2: Int): Int = arg1 + arg2
     println(test4b(1, 2))
+
+    println("------")
+
+    // 匿名函数
+    () -> {
+      println("xxx")
+    }
   }
 
 }
