@@ -108,6 +108,7 @@ object Function2 {
 
     println("---")
 
+    // 柯里化
     def f4c(i: Int, s: String)(j: Int, ss: String): String = {
       i + s + " & " + j + ss
     }
@@ -219,7 +220,7 @@ object Function2 {
     val string8c: String = f8c(8, "c", (i: Int, s: String) => {
       i + s
     })(888, 888)
-    println(string8b)
+    println(string8c)
 
     println("------")
   }
