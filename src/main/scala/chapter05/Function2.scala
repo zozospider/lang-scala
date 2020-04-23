@@ -224,11 +224,11 @@ object Function2 {
 
     println("------")
 
-    def f9(i: Int, f: Int => Unit): Unit = {
+    def f9(i: Int, f: String => Unit): Unit = {
       println(i)
-      f(9)
+      f("s")
     }
-    f9(-999, (i: Int) => {
+    f9(-999, (i: String) => {
       println(i)
     })
     f9(-999, i => {
@@ -237,6 +237,22 @@ object Function2 {
     f9(-999, i => println(i))
     f9(-999, println(_))
     f9(-999, println)
+
+    println("------")
+
+    def f10(i: Int, f: (String, String) => Unit): Unit = {
+      println(i)
+      f("s", "s")
+    }
+    f10(-1000, (s1: String, s2: String) => {
+      println(s1 + " & " + s2)
+    })
+    f10(-1000, (s1, s2) => {
+      println(s1 + " & " + s2)
+    })
+    f10(-1000, (s1, s2) => println(s1 + " & " + s2))
+    // TODO ?
+    // f10(-1000, println(_ + " & " + _))
 
     println("------")
   }
