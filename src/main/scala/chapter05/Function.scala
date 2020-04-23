@@ -59,6 +59,7 @@ object Function {
     }
     test5(1, 2)
     test5(arg2 = 2, arg1 = 1)
+    test5(arg1 = 1)
     test5(1)
 
     def test5b(arg1: Int = 10, arg2: Int): Unit = {
@@ -66,6 +67,7 @@ object Function {
     }
     test5b(1, 2)
     test5b(arg2 = 2, arg1 = 1)
+    test5b(arg2 = 2)
 
     println("------")
 
