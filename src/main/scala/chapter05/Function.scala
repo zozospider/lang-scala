@@ -53,6 +53,23 @@ object Function {
 
     println("------")
 
+    // 默认值
+    def test5(arg1: Int, arg2: Int = 10): Unit = {
+      println(arg1.toString + " & " + arg2.toString)
+    }
+    test5(1, 2)
+    test5(1)
+
+    println("------")
+
+    // 可变参数
+    def test6(s: String*): Unit = {
+      println(s)
+    }
+    test6("a", "b", "c")
+
+    println("------")
+
     // 匿名函数
     () -> {
       println("xxx")
