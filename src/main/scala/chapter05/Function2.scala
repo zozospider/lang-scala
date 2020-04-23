@@ -223,6 +223,22 @@ object Function2 {
     println(string8c)
 
     println("------")
+
+    def f9(i: Int, f: Int => Unit): Unit = {
+      println(i)
+      f(9)
+    }
+    f9(-999, (i: Int) => {
+      println(i)
+    })
+    f9(-999, i => {
+      println(i)
+    })
+    f9(-999, i => println(i))
+    f9(-999, println(_))
+    f9(-999, println)
+
+    println("------")
   }
 
 }
