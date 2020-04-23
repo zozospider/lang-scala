@@ -53,12 +53,19 @@ object Function {
 
     println("------")
 
-    // 默认值
-    def test5(arg1: Int, arg2: Int = 10): Unit = {
+    // 默认值 (Scala 中没有重载)
+    def test5(arg1: Int, arg2: Int = 20): Unit = {
       println(arg1.toString + " & " + arg2.toString)
     }
     test5(1, 2)
+    test5(arg2 = 2, arg1 = 1)
     test5(1)
+
+    def test5b(arg1: Int = 10, arg2: Int): Unit = {
+      println(arg1.toString + " & " + arg2.toString)
+    }
+    test5b(1, 2)
+    test5b(arg2 = 2, arg1 = 1)
 
     println("------")
 
