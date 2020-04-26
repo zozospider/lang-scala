@@ -4,6 +4,15 @@ object Function2 {
 
   def main(args: Array[String]): Unit = {
 
+    def function0a: () => Unit = () => {}
+    def function0b: Int => Int = (i: Int) => i
+    def function0c: (Int, Int) => Int = (i: Int, j: Int) => i + j
+    println(function0a)
+    println(function0b)
+    println(function0c)
+
+    println("------")
+
     def f1aa(): Unit = {
       println("f1aa")
     }
@@ -108,12 +117,22 @@ object Function2 {
 
     println("---")
 
+    def f4c(i: Int, s: String): (Int, String) => String = {
+      (j: Int, ss: String) => i + s + " & " + j + ss
+    }
+    val function4c: (Int, String) => String = f4c(4, "c")
+    val string4c: String = f4c(4, "c")(4, "cc")
+    println(function4c)
+    println(string4c)
+
+    println("---")
+
     // 柯里化
-    def f4c(i: Int, s: String)(j: Int, ss: String): String = {
+    def f4d(i: Int, s: String)(j: Int, ss: String): String = {
       i + s + " & " + j + ss
     }
-    val string4c: String = f4c(4, "c")(4, "cc")
-    println(string4c)
+    val string4d: String = f4d(4, "d")(4, "dd")
+    println(string4d)
 
     println("------")
 
