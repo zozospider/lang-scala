@@ -1,25 +1,56 @@
-/target/
-!.mvn/wrapper/maven-wrapper.jar
+# OS
+.DS_Store
+.DS_Store?
+.Trashes
+._*
+.Spotlight-V100
+ehthumbs.db
+Thumbs.db
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
+# IntelliJ IDEA
 .idea
 *.iws
 *.iml
 *.ipr
+target
+/target/
 
-### NetBeans ###
+# eclipse
+build
+.classpath
+.project
+.settings
+.worksheet
+
+# VS Code
+.vscode
+
+# NetBeans
 /nbproject/private/
 /build/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
+
+# Other
+.history
+.cache
+.cache-main
+
+# JVM
+*.class
+
+# Scala
+.scala_dependencies
+.tasty
+
+# sbt (may want to keep parts of 'project')
+bin/
+project/
+target/
+build/
+
+# Hadoop Spark
+output*/
+checkpoint*/

@@ -1,0 +1,3 @@
+Hello World Scala
+Hello Scala
+Hadoop Hello
